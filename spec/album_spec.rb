@@ -2,7 +2,7 @@ require_relative '../lib/album'
 
 describe Album do
   let(:stairway) { Track.new('Stairway to Heaven', ['Led Zeppelin'], 482, 1.0) }
-  let(:kashmir) { Track.new('Kahsmir', ['Led Zeppelin'], 508, 1.0)}
+  let(:kashmir) { Track.new('Kahsmir', ['Led Zeppelin'], 508, 2.0)}
   let(:greatest_hits) { Album.new('Greatest Hits', [stairway, kashmir]) }
 
   describe 'attributes' do
@@ -15,6 +15,11 @@ describe Album do
   describe '#duration' do
     it 'has a duration' do
       expect(greatest_hits.duration).to eq 990
+    end
+  end
+  describe '#price' do
+    it 'has a price' do
+      expect(greatest_hits.price).to eq 3.0
     end
   end
 end
