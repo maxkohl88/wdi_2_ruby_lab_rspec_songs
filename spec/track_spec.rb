@@ -18,6 +18,9 @@ describe Track do
     it 'discounts the price by the given amount' do
       track.set_discount(0.2)
       expect(track.price).to eq 0.8
+
+      track.set_discount(0.6)
+      expect(track.price).to eq 0.4
     end
   end
 

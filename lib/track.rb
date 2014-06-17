@@ -8,7 +8,7 @@ class Track
   end
 
   def set_discount(discount_percentage)
-    self.price = price * (1 - discount_percentage)
+    self.price = original_price * (1 - discount_percentage)
   end
 
   def reset_discount
