@@ -13,6 +13,12 @@ describe Album do
     end
   end
 
+  describe '#initialize' do
+    it 'prevents an album from being created with no tracks' do
+      expect{ Album.new('Genesis', []) }.to raise_error ArgumentError
+    end
+  end
+
   describe '#duration' do
     it 'has a duration' do
       expect(greatest_hits.duration).to eq 1380

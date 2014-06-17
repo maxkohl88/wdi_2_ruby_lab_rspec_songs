@@ -3,6 +3,9 @@ class Album
 
   def initialize(name, tracks)
     @name, @tracks = name, tracks
+
+  raise ArgumentError, 'no tracks provided' if tracks.count == 0
+
   end
 
   def duration
