@@ -30,4 +30,13 @@ describe Album do
       expect(greatest_hits.artists).to eq ['Led Zeppelin', 'The Eagles']
     end
   end
+
+  describe '#single?' do
+    it 'is or is not a single' do
+      a_single = Album.new("Stairway", [stairway])
+
+      expect(a_single.single?).to eq true
+      expect(greatest_hits.single?).to eq false
+    end
+  end
 end
